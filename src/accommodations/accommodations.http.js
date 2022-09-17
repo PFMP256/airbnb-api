@@ -60,7 +60,7 @@ const getAllUserLog = (req, res) => {
       accommodationControllers
         .editAccommodation(data, accommodationId, userId, roleId)
         .then((response) => {
-          if (response[0]) {
+          if (response) {
             return res.status(200).json({
               message: `Accommodation edited succesfully with id ${accommodationId}`,
             });
